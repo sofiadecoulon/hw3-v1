@@ -1,0 +1,17 @@
+<% @entries = Entry.all %>
+<h1>Places I've Been</h1>
+<p>Cities:</p>
+<ul>
+<p>
+<% for entry in @entries %>
+ <li><%= entry ["title"]%>
+ <%= entry ["descrition"]%>
+ <%= entry ["occurred_on"]%>
+ <%= entry ["place_id"]%>
+ </li>
+  <% end %>
+  </p>
+<p>
+  <a href="/entry">New Entry</a>
+  </p>
+</ul>
