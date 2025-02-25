@@ -1,9 +1,10 @@
-<% @entries = Entry.all %>
-<h1>Places I've Been</h1>
-<p>Cities:</p>
+<% @entry = Entry.all %>
+
+<p>Entries:</p>
+
 <ul>
 <p>
-<% for entry in @entries %>
+<% for entry in @entry %>
  <li><%= entry ["title"]%>
  <%= entry ["descrition"]%>
  <%= entry ["occurred_on"]%>
@@ -12,6 +13,6 @@
   <% end %>
   </p>
 <p>
-  <a href="/entry">New Entry</a>
+  <a href="/entries/new">New Entry</a>
   </p>
 </ul>

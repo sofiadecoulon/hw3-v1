@@ -1,5 +1,5 @@
-<h1>New Entry for <%= @place["name"] %></h1>
-<form action="/entry" method="post">
+<h1>New Entry ></h1>
+<form action="/entries" method="post">
   <p>
     <label for="title">Title</label>
     <input type="text" name="title" id="title">
@@ -14,6 +14,5 @@
   </p>
   <input type="hidden" name="place_id" id="place_id" value="<%= params["place_id"] %>">
   <button>Submit</button>
-  <a href="/place/<%= @place["id"] %>">Cancel</a>
+ 
 </form>
-
